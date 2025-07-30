@@ -29,11 +29,40 @@
     .navbar {
       margin-bottom: 20px;
     }
-    .carousel-image {
-      width: 350px;
-      height: 350px;
-      object-fit: cover;
-    }
+      /* Make carousel images larger with fixed height */
+  .carousel-image {
+    height: 400px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    padding: 0 20px; /* slight padding so it's not too wide */
+  }
+
+  /* Style carousel controls (arrows) */
+  .carousel-control.left,
+  .carousel-control.right {
+    width: 5%;
+    font-size: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    text-shadow: none;
+    background: none;
+    opacity: 0.8;
+  }
+
+  .carousel-control.left:hover,
+  .carousel-control.right:hover {
+    color: #000;
+    opacity: 1;
+  }
+
+  /* Optional: Ensure arrows are always visible above image */
+  .carousel-control {
+    z-index: 10;
+  }
     .feature-item img {
       max-width: 100%;
       height: auto;
