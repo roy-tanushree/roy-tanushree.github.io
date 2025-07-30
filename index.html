@@ -29,15 +29,20 @@
     .navbar {
       margin-bottom: 20px;
     }
-      /* Make carousel images larger with fixed height */
- .carousel-image {
-  height: 400px;          /* Set your desired uniform height */
-  width: 100%;            /* Let it fill the container width */
-  object-fit: cover;      /* Crop excess to fill the box */
-  display: block;
+    #main-carousel {
+  max-width: 800px;
   margin: 0 auto;
 }
-
+      /* Make carousel images larger with fixed height */
+  .carousel-image {
+    height: 400px;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    padding: 0 20px; /* slight padding so it's not too wide */
+  }
   /* Style carousel controls (arrows) */
   .carousel-control.left,
   .carousel-control.right {
