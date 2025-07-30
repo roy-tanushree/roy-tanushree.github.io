@@ -42,30 +42,45 @@
       margin-bottom: 40px;
     }
     
-    .photo_gallery {
+    .photo-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
-      gap: 20px; /* space between columns and rows */
-      max-width: 900px;
-      margin: 0 auto; /* center container */
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
       padding: 20px;
     }
+
     figure {
       margin: 0;
       background: #f8f8f8;
       padding: 10px;
       border: 1px solid #ddd;
     }
+
     figure img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     figcaption {
       margin-top: 8px;
       font-size: 0.9em;
       color: #555;
       text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -95,6 +110,7 @@
   </nav>
 
 <section class="photo-gallery">
+   <h3>SHARE Lab in Action</h3>
  <figure>
         <img src="images/ACC1.jpg" class="img-responsive img-thumbnail" alt="Lab Image 1">
         <figcaption class="text-center">American Control Conference (ACC) 2025</figcaption>
