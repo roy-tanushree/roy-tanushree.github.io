@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Teaching - SHARE Lab</title>
+  <title>SHARE Lab - In action </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Teaching by Dr. Tanushree Roy, SHARE Lab, Texas Tech University">
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
@@ -41,6 +41,31 @@
     .section {
       margin-bottom: 40px;
     }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+      gap: 20px; /* space between columns and rows */
+      max-width: 900px;
+      margin: 0 auto; /* center container */
+      padding: 20px;
+    }
+    figure {
+      margin: 0;
+      background: #f8f8f8;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -68,9 +93,46 @@
     </div>
   </nav>
 
-  <!-- Teaching Content -->
-    <!-- Image Gallery Section -->
+ <div class="container">
+ <figure>
+        <img src="images/ACC1.jpg" class="img-responsive img-thumbnail" alt="Lab Image 1">
+        <figcaption class="text-center">American Control Conference (ACC) 2025</figcaption>
+      </figure>
+      <figure style="margin-top: 15px;">
+        <img src="images/fish_sp25.jpeg" class="img-responsive img-thumbnail" alt="Lab Image 2">
+        <figcaption class="text-center">Fishing trip to Dunbar Lake, Summer '25</figcaption>   
+      </figure>
+      <figure style="margin-top: 15px;">
+        <img src="images/fish_sum25.jpeg" class="img-responsive img-thumbnail" alt="Lab Image 6">
+        <figcaption class="text-center">Spring fishing </figcaption>
+      </figure>
+        <figure style="margin-top: 15px;">
+        <img src="images/ACC_2024.jpg" class="img-responsive img-thumbnail" alt="Lab Image 6">
+        <figcaption class="text-center">Sanchita Ghosh, presenting at ACC 2024, Toronto</figcaption>
+      </figure>
+     <figure style="margin-top: 15px;">
+        <img src="images/SG_CCTA23.jpg" class="img-responsive img-thumbnail" alt="Lab Image 6">
+        <figcaption class="text-center">Ph.D. student, Sanchita Ghosh, presenting at CCTA '23 (Barbados), Toronto</figcaption>
+      </figure>
+   <figure>
+        <img src="images/sanchita_ACC25.jpg" class="img-responsive img-thumbnail" alt="Lab Image 5">
+        <figcaption class="text-center">Sanchita Ghosh presenting one of her papers in ACC'25</figcaption>
+      </figure>
+      <figure style="margin-top: 15px;">
+        <img src="images/dinner_spring25.jpeg" class="img-responsive img-thumbnail" alt="Lab Image 3">
+        <figcaption class="text-center">Lab dinner, Summer '25</figcaption>
+      </figure>
+      <figure>
+        <img src="images/game1.jpg" class="img-responsive img-thumbnail" alt="Lab Image 4">
+        <figcaption class="text-center">Game night, Fall 2024</figcaption>
+        </figure>
+          <figure>
+        <img src="images/fish_2023.jpg" class="img-responsive img-thumbnail" alt="Lab Image 4">
+        <figcaption class="text-center">SHARE lab first fishing trip, Summer '23</figcaption>
+      </figure>
+  </div>
 <!-- Image Gallery Section -->
+  <!--
 <div class="section">
   <h3>SHARE Lab in Action</h3>
   <div class="row">
@@ -92,7 +154,7 @@
         <figcaption class="text-center">Sanchita Ghosh, presenting at ACC 2024, Toronto</figcaption>
       </figure>
      <figure style="margin-top: 15px;">
-        <img src="images/ACC_2024.jpg" class="img-responsive img-thumbnail" alt="Lab Image 6">
+        <img src="images/SG_CCTA23.jpg" class="img-responsive img-thumbnail" alt="Lab Image 6">
         <figcaption class="text-center">Ph.D. student, Sanchita Ghosh, presenting at CCTA '23 (Barbados), Toronto</figcaption>
       </figure>
       
@@ -117,7 +179,7 @@
     </div>
   </div>
 </div>
-
+-->
   <!-- Footer -->
   <footer class="footer">
     <div class="row">
