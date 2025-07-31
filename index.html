@@ -29,11 +29,34 @@
     .navbar {
       margin-bottom: 20px;
     }
+#main-carousel {
+  position: relative;
+  max-height: 400px;
+  overflow: hidden;
+  margin-bottom: 30px; /* give some space before news */
+}
+
+.carousel-inner .item {
+  height: 400px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+    
+
+   /*
     #main-carousel {
   max-height: 800px;
   margin: 0 auto;
-}
-      /* Make carousel images larger with fixed height */
+} 
+      
   .carousel-image {
     height: 400px;
     width: auto;
@@ -41,8 +64,9 @@
     margin: 0 auto;
     display: block;
     object-fit: cover;
-    padding: 0 20px; /* slight padding so it's not too wide */
+    padding: 0 20px;
   }
+  */
   /* Style carousel controls (arrows) */
   .carousel-control.left,
   .carousel-control.right {
