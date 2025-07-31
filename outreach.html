@@ -40,6 +40,47 @@
     .section {
       margin-bottom: 40px;
     }
+.photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 5px;
+      max-width: 1500px;
+      margin: 0 auto;
+      padding: 10px;
+    }
+
+    figure {
+      margin: 0;
+      background: #f8f8f8;
+      padding: 0px;
+      border: 1px solid #ddd;
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    figcaption {
+      margin-top: 8px;
+      font-size: 0.9em;
+      color: #555;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .photo-gallery {
+        grid-template-columns: 1fr;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -69,15 +110,36 @@
 
   <!-- Outreach Content -->
   <div class="section">
-       <p>Coming soon.</p>
+    <h3>High School Student Internships</h3>
+<p>Through Texas Tech University’s summer Engineering Research Internship
+Experience (ERIE) program, our lab hosted two high school students who worked on automation and cyberphysical
+systems during the Summer of 2023. During their tenure in the lab, the students implemented
+various path-planning strategies using MakeBot and CyberPi platform. This encompasses my ongoing outreach efforts to train students
+for creating a pipeline toward cybersecurity workforce development. <p>
+
+<p> Students can reach out TTU ERIE to apply for similar opportunities in SHARE lab. Please apply
+ <a href="https://www.depts.ttu.edu/coe/stem/fieldtrips.php" target="_blank">here</a> or contact Ms. Heather Sherrill (heather.sherrill@ttu.edu). <p>
+	<div class="row">
+    	<section class="photo-gallery">
+           <figure>
+            <img src="images/HS1.png" class="img-responsive img-thumbnail" alt="Lab Image 2"> 
+	<figcaption class="text-center">High school students working in SHARE lab.</figcaption> 
+          </figure>
+	<figure>
+            <img src="images/HS2.png" class="img-responsive img-thumbnail" alt="Lab Image 2">
+            <figcaption class="text-center">MakeBot and CyberPi assembled by high school students.</figcaption>  
+          </figure>
+ 	</section>
+   	</div>
   </div>
+
 
   <!-- Footer -->
   <footer class="footer">
     <div class="row">
       <div class="col-sm-5">
         <h4>Contact</h4>
-        <p><strong>Email:</strong> <a href="mailto:tanushree.roy@ttu.edu">tanushree.roy@ttu.edu</a></p>
+        <p><strong>Email:</strong> <br>tanushree [a dot] roy [an at] ttu.edu<br></p>
         <p><strong>Phone:</strong> (806) 834-8757</p>
       </div>
       <div class="col-sm-2 centered">
