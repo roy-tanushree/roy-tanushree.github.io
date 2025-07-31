@@ -34,26 +34,26 @@
   margin-bottom: 40px;
   max-width: 100%;
   max-height: 450px;
-  overflow: hidden;
 }
 
 .carousel-inner {
-  width: 100%;
+  height: 450px;
 }
 
 .carousel-inner .item {
   height: 450px; /* fixed height */
   text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .carousel-image {
-  height: 500px;
-  width: 500px;
-  max-width: 100%;
-  object-fit: contain;
+  height: 450px;
+  width: auto;
+  object-fit: scale-down; 
   display: block;
   margin: 0 auto;
-  background-color: #000; /* for letterboxing effect */
+  background-color: #f5f5f5; /* for letterboxing effect */
 }
 
 .carousel-caption {
@@ -86,12 +86,39 @@
   .carousel-control {
     z-index: 10;
   }
+
+/* Move indicators below carousel and center */
+.carousel-indicators.below-indicators {
+  position: relative; /* good */
+  bottom: auto;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.carousel-indicators.below-indicators li {
+  display: inline-block;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #888;  /* gray dots */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+}
+
+.carousel-indicators.below-indicators .active {
+  background-color: #333; /* darker dot */
+}
     .feature-item img {
-      max-width: 100%;
-      height: auto;
-    }
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
     .feature-item {
-      margin-bottom: 30px;
+      max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
     }
     .date {
       font-size: 14px;
@@ -106,12 +133,7 @@
     .centered {
       text-align: center;
     }
-    .carousel-caption h4 {
-      background: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 5px 10px;
-      border-radius: 4px;
-    }
+   
   </style>
 </head>
 <body>
@@ -140,30 +162,42 @@
   </nav>
 
   <!-- Carousel -->
-  <div id="main-carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="item active">
-        <img src="res_image/overview.jpg" class="carousel-image" alt="">
-        <div class="carousel-caption">
-          <h4>Welcome to Dr. Roy's SHARE Lab</h4>
-        </div>
-      </div>
-      <div class="item">
-        <img src="res_image/simulator.png" class="carousel-image" alt="">
-        <div class="carousel-caption">
-          <h4>Driving simulator for HIL testing</h4>
-        </div>
-      </div>
-      <div class="item">
-        <img src="images/ACC1.jpg" class="carousel-image" alt="">
-        <div class="carousel-caption">
-          <h4>SHARE Lab at Denver for ACC 2025</h4>
-        </div>
+ <div id="main-carousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+
+  <!-- Carousel Items -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="res_image/overview.jpg" class="carousel-image" alt="">
+      <div class="carousel-caption">
+        <h4>Welcome to Dr. Roy's SHARE Lab</h4>
       </div>
     </div>
-    <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
-    <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
-  </div>
+    <div class="item">
+      <img src="res_image/simulator.png" class="carousel-image" alt="">
+      <div class="carousel-caption">
+        <h4>Driving simulator for HIL testing</h4>
+      </div>
+    </div>
+    <div class="item">
+      <img src="images/ACC1_small.jpg" style="width:50%;" class="carousel-image" alt="">
+      <div class="carousel-caption">
+        <h4>SHARE Lab at Denver for ACC 2025</h4>
+      </div>
+    </div>
+  </div> <!-- end carousel-inner -->
+
+  <!-- Indicators BELOW carousel -->
+  <ol class="carousel-indicators below-indicators">
+    <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+    <li data-target="#main-carousel" data-slide-to="1"></li>
+    <li data-target="#main-carousel" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#main-carousel" data-slide="prev">‹</a>
+  <a class="right carousel-control" href="#main-carousel" data-slide="next">›</a>
+
+</div> <!-- end main-carousel -->
 
   <!-- News Section -->
   <div class="row">
@@ -177,7 +211,7 @@
       <h5><span class="date">July 8, 2025</span></h5>
       <h4><a href="#">Two papers presented at ACC'25</a></h4>
       <div class="centered">
-        <a href="#"><img src="res_image/ISO_KO.png" alt="Thumbnail 1"></a>
+        <a href="#"><img src="res_image/ISC_KO.png" style="width:50%;" alt="Thumbnail 1"></a>
       </div>
       <p>
        Two papers presented at 2025 American Control Conference
@@ -189,7 +223,7 @@
       <h5><span class="date">April 20, 2025</span></h5>
       <h4><a href="#">Student Poster at Conference</a></h4>
       <div class="centered">
-        <a href="#"><img src="thumbs/thumb2.jpg" alt="Thumbnail 2"></a>
+        <a href="#"><img src="res_image/ISC_KO.png" style="width:50%;" alt="Thumbnail 2"></a>
       </div>
       <p>
         Graduate student Jane Doe presented her poster at the IEEE Automation Conference. 
@@ -201,7 +235,7 @@
       <h5><span class="date">March 10, 2025</span></h5>
       <h4><a href="#">Lab Expansion Announced</a></h4>
       <div class="centered">
-        <a href="#"><img src="thumbs/thumb3.jpg" alt="Thumbnail 3"></a>
+        <a href="#"><img src="res_image/ISC_KO.png" style="width:50%;" alt="Thumbnail 3"></a>
       </div>
       <p>
         SHARE Lab will be expanding to a new facility in Fall 2025. 
@@ -232,13 +266,15 @@
       </div>
     </div>
   </footer>
-</div>
+
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
-  $('#main-carousel').carousel();
+  $('#main-carousel').carousel({
+    interval: 3000
+  });
 </script>
 
 </body>
