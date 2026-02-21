@@ -28,8 +28,9 @@
 }
 
 .header-title {
-  margin: 0 auto;   /* THIS keeps it centered */
+  margin: 0;
   text-align: center;
+  flex: 1;   /* important */
 }
     .section {
       margin-bottom: 40px;
@@ -174,14 +175,14 @@
 
 <div class="container">
   <!-- Header -->
-  <header class="jumbotron text-center">
-    <img src="images/logo.jpg" alt="Left Logo" class="header-logo left-logo" style="max-height:80px;">
+ <header class="jumbotron custom-header">
+    <img src="images/logo.jpg" alt="Left Logo" class="header-logo" style="max-height:80px;">
 
   <div class="header-title">
     <h1>Smart Human-centric Automation Resilience (SHARE) Lab</h1>
   </div>
 
-  <img src="images/ttu_logo.png" alt="Right Logo" class="header-logo right-logo" style="max-height:80px;">
+  <img src="images/ttu_logo.png" alt="Right Logo" class="header-logo" style="max-height:80px;">
     <!-- <h1>Smart Human-centric Automation Resilience (SHARE) Lab</h1> -->
   </header>
   
