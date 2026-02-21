@@ -12,6 +12,28 @@
       font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	    font-size: 18px;
     }
+.container {
+  width: 70%;
+}
+.custom-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.header-logo {
+  height: 80px;
+  width: auto;
+}
+
+.header-title {
+  margin: 0;
+  text-align: center;
+  flex: 1;   /* important */
+}
+
+
     .section {
       margin-bottom: 40px;
       text-align: justify; 
@@ -69,11 +91,18 @@
 <body>
 
 <div class="container">
-  <!-- Header -->
-  <header class="jumbotron text-center">
-    <p class="lead">Department of Mechanical Engineering</p>
+   <!-- Header -->
+ <header class="jumbotron custom-header">
+    <img src="images/logo.jpg" alt="Left Logo" class="header-logo" style="max-height:80px;">
+
+  <div class="header-title">
     <h1>Smart Human-centric Automation Resilience (SHARE) Lab</h1>
+  </div>
+
+  <img src="images/ttu_logo.png" alt="Right Logo" class="header-logo" style="max-height:80px;">
+    <!-- <h1>Smart Human-centric Automation Resilience (SHARE) Lab</h1> -->
   </header>
+  
 
   <!-- Navbar -->
   <nav class="navbar navbar-default">
@@ -92,7 +121,7 @@
   </nav>
 
   <!-- Lab Members -->
-  <div class="container">
+  
     
     <hr>
 
@@ -117,7 +146,7 @@
 
     <p>I am looking for motivated students to apply for PhD. Please look under the Open positions tab. Admitted Master’s and undergraduate students at Texas Tech University interested in our research should email me with their CV and areas of interest.</p>
       </div>
-   </div>
+  
 
     <!-- Graduate Students -->
     <h3>PhD Students</h3>
